@@ -51,54 +51,6 @@
               </a>
             </li>
             
-           
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                <span class="menu-title">Basic</span>
-                <i class="menu-arrow"></i>
-                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
-              </a>
-              <div class="collapse" id="ui-basic">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item">
-                    <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="pages/ui-features/typography.html">Typography</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-           
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="collapse" href="#forms" aria-expanded="false" aria-controls="forms">
-                <span class="menu-title">Forms</span>
-                <i class="mdi mdi-format-list-bulleted menu-icon"></i>
-              </a>
-              <div class="collapse" id="forms">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item">
-                    <a class="nav-link" href="pages/forms/basic_elements.html">Form Elements</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
-                <span class="menu-title">Charts</span>
-                <i class="mdi mdi-chart-bar menu-icon"></i>
-              </a>
-              <div class="collapse" id="charts">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item">
-                    <a class="nav-link" href="pages/charts/chartjs.html">ChartJs</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
             <li class="nav-item">
               <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
                 <span class="menu-title">Tables</span>
