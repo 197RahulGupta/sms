@@ -1,0 +1,12 @@
+{
+    "agents": [
+        "cursor"
+    ],
+    "cloud": true,
+    "guidelines": true,
+    "skills": [
+        "laravel-best-practices",
+        "tailwindcss-development",
+        "deploying-laravel-cloud"
+    ]
+}

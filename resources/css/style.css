@@ -1,0 +1,91 @@
+
+body{
+    background-color: rgb(231, 230, 229) !important;
+}
+.bg-blue{
+    background-color: #052c65;
+}
+.bg-peach{
+    background-color: peachpuff;
+}
+.bg-pink{
+    background-color: pink;
+}
+.fs-7{
+    font-size: smaller;
+}
+a{
+    text-decoration: none !important;
+    color: white !important;
+}
+.button-hover:hover{
+    background-color: darkred !important;
+    color: black !important;
+    font-size: 16px;
+}
+.button-red-hover:hover{
+    background-color: darkred !important;
+    color: black !important;
+    font-size: 20px !important;
+    box-shadow: 20px 10px 8px red;
+
+}
+.button-white-hover:hover{
+    color: black !important;
+    font-size: 20px !important;
+
+}
+.about-image{
+    height: 500px;
+     width:490px;
+     border-radius: 5%;
+}
+.about7-image{
+    height: 600px;
+    width: 500px;
+    border-radius: 10%;
+}
+.section-image{
+    height: 350px;
+     width:530px;
+}
+.card:hover .card-icon i {
+    
+    color: white !important;
+}
+.card:hover .card-icon {
+    background-color: red !important;
+    transition: all 0.3s ease-in-out;
+}
+.card-border {
+    position: relative;
+    overflow: hidden; /* Keeps the growing line inside the card's rounded corners */
+    transition: all 0.3s ease-in-out;
+}
+
+/* 2. Create the hidden bottom line (starts at 0 width) */
+.card-border::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;                    /* Invisible state at first */
+    height: 6px;                 /* Thickness of your bottom line */
+    background-color: #dc3545;   /* Bootstrap's standard red color */
+    transition: width 0.4s ease-in-out; /* The magic animation rule */
+}
+
+/* 3. When you hover the card, expand the line to 100% width */
+.card:hover::after {
+    width: 100%;
+}
+.date{
+    width: 100px;
+}
+.cardhover:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.cardhover:hover .card-link {
+    
+    color: red !important;
+}
