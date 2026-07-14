@@ -45,7 +45,7 @@
                                     <i class="fa fa-pencil icon-sm text-white align-middle"></i>
                                 </a>
 
-                                <form action="{{ route('admin.introduction.destroy', $course) }}" method="post">
+                                <form action="{{ route('admin.course.destroy', $course) }}" method="post">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" onclick="return confirm('Are you sure want to delete')"

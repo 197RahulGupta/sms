@@ -3,10 +3,10 @@
     <div class="content-wrapper">
         <div class="page-header">
             <h3 class="page-title">
-                <a href="{{ route('admin.student.index') }}" class="btn btn-sm btn-primary"> <i
+                <a href="{{ route('admin.teacher.create') }}" class="btn btn-sm btn-primary"> <i
                         class="mdi mdi-home"></i></a>
                 <span class=" text-white me-2">
-                </span> Student Index Page
+                </span> Teacher Index Page
             </h3>
             <nav aria-label="breadcrumb">
                 <ul class="breadcrumb">
@@ -21,49 +21,38 @@
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Full_Name</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Name</th>
                         <th scope="col">Course</th>
-                        <th scope="col">Contact_Number</th>
-                        <th scope="col">Reffered_By</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Enquiry</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Is_active</th>
                         <th scope="col">Action</th>                
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($students as $student)
+                    @foreach ($teachers as $teacher)
                         <tr>
                             <th scope="row">{{ $loop->iteration }}</th>
-                            <td>{{ $student->full_name }}</td>
-                            <td>{{ $student->course->course_name }}</td>
-                            <td>{{ $student->contact_number }}</td>
-                            <td>{{ $student->reffered_by }}</td>
-                            @if ($student->status == 1)
+                            <td><img src="{{ $teacher->image }}" alt="" height=100></td>
+                            <td>{{ $teacher->name }}</td>
+                            <td>{{ $teacher->course->course_name }}</td>
+                            <td>{{ $teacher->email }}</td>
+                            @if ($teacher->is_active == 1)
                             <td><span class="text-success">Active</span> </td>
                             @else
                             <td><span class="text-danger">InActive</span> </td>
                                 
                             @endif
-                             @if ($student->enquiry == 1)
-                            <td><span class="text-success">Enquiry</span> </td>
-                            @else
-                            <td><span class="text-danger">Admission</span> </td>
-                                
-                            @endif
-
+                            
 
 
                             <td class="d-flex gap-3">
-                                <a href="{{ route('admin.student.edit', $student) }}"
+                                <a href="{{ route('admin.teacher.edit', $teacher) }}"
                                     class="btn btn-sm btn-primary text-white">
                                     <i class="fa fa-pencil icon-sm text-white align-middle"></i>
                                 </a>
-                                <a href="{{ route('admin.studentFee.student', $student) }}"
-                                    class="btn btn-sm btn-primary text-white">
-                                    +
-                                </a>
 
-                                <form action="{{ route('admin.student.destroy', $student) }}" method="post">
+                                <form action="{{ route('admin.teacher.destroy', $teacher) }}" method="post">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" onclick="return confirm('Are you sure want to delete')"

@@ -7,24 +7,32 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Storage;
 
-class About extends Model
+class Teacher extends Model
 {
     use SoftDeletes;
 
     protected $fillable = [
-        'title',
+        'name',
+        'email',
+        'course_id',
+        'address',
         'image',
-        'description',
-        'employment_rate',
-        'student_ratio',
-        'program_offer',
+        'is_active',
+        'join_date',
+        'leave_date',
+        'salary',
     ];
 
     protected function image(): Attribute
     {
         return Attribute::make(
             get: fn (?string $value) => $value ? Storage::disk('public')->url($value) : null,
-            set: fn ($value) => $value ? $value->store('about', 'public') : null,
+            set: fn ($value) => $value ? $value->store('teacher', 'public') : null,
         );
+    }
+
+    public function course()
+    {
+        return $this->belongsTo(Course::class);
     }
 }

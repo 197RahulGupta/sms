@@ -7,6 +7,7 @@ use App\Http\Requests\LoginRequest;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Request;
 
 class AuthController extends Controller
 {
@@ -54,5 +55,13 @@ class AuthController extends Controller
         return $user->is_admin
             ? redirect()->route('admin.dashboard')
             : redirect()->route('home');
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+
+        return redirect(route('loginPage')); // Redirect to homepage or login page
     }
 }

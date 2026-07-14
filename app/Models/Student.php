@@ -31,5 +31,18 @@ class Student extends Model
     {
         return $this->belongsTo(Course::class);
     }
+    public function studentFees()
+    {
+        return $this->hasMany(StudentFee::class);
+    }
+    public function latestRemainingBalance()
+     {
+         // Fetch the latest fee record sorted by id or paid_date
+         $latestFee = $this->studentFees()->latest('id')->first();
+
+         // If a payment history exists, return its remaining balance.
+         // Otherwise, return the initial course fee.
+         return $latestFee ? $latestFee->remaining_balance : ($this->course->fee ?? 0);
+     }
 
 }
