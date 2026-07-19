@@ -8,6 +8,8 @@ use App\Models\About;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
+use App\Http\Controllers\Controller;
+
 
 class AboutController extends Controller
 {

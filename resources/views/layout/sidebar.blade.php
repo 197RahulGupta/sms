@@ -9,7 +9,8 @@
                 </div>
                 <div class="nav-profile-text d-flex flex-column">
                     <span class="font-weight-bold mb-2">{{ auth()->user()->name }}</span>
-                    <span class="text-secondary text-small">{{ auth()->user()->email === 'admin@admin.com' ? 'Super Admin' : 'Guest' }}</span>
+                    <span
+                        class="text-secondary text-small">{{ auth()->user()->email === 'admin@admin.com' ? 'Super Admin' : 'Guest' }}</span>
                 </div>
                 <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
             </a>
@@ -41,29 +42,36 @@
         <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.course.index') }}">
                 <span class="menu-title">Course</span>
-              <i class="mdi mdi-lock menu-icon"></i>
+                <i class="mdi mdi-lock menu-icon"></i>
 
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.student.index') }}">
                 <span class="menu-title">Student</span>
-                 <i class="mdi mdi-chart-bar menu-icon"></i>
+                <i class="mdi mdi-chart-bar menu-icon"></i>
             </a>
         </li>
-   <li class="nav-item">
+        <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.teacher.index') }}">
                 <span class="menu-title">Teacher</span>
-                 <i class="mdi mdi-chart-bar menu-icon"></i>
+                <i class="mdi mdi-chart-bar menu-icon"></i>
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.studentfee.index') }}">
                 <span class="menu-title">StudentFee</span>
-                 <i class="mdi mdi-chart-bar menu-icon"></i>
+                <i class="mdi mdi-chart-bar menu-icon"></i>
             </a>
         </li>
-   
-       
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('admin.systemsetting.create') }}">
+                <span class="menu-title">SystemSetting</span>
+                <i class="mdi mdi-chart-bar menu-icon"></i>
+            </a>
+        </li>
+
+
+
     </ul>
 </nav>

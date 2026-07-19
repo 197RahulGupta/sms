@@ -14,13 +14,14 @@ return new class extends Migration
         Schema::create('system_settings', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('orgination_name');
+            $table->string('organization_name');
             $table->string('address');
+            $table->string('logo');
             $table->string('pan_no');
             $table->string('phone_number');
             $table->string('telephone_number');
             $table->string('footer_description');
-            $table->string('map_url');
+            $table->longtext('map_url');
             $table->string('email');
             $table->string('facebook_url');
             $table->string('tiktok_url');
